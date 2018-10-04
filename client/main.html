@@ -1,0 +1,27 @@
+<head>
+  <title>myJuice</title>
+</head>
+
+<body>
+  <h1>Configure: myJuice</h1>
+  {{> configure}}
+
+  <h2>myJuice: List</h2>
+  {{> juiceList}}
+</body>
+
+<template name="configure">
+  {{#with juice}}
+  <input id="drink" type="text" placeholder="Drink"/>
+  <input id="units" type="text" placeholder="No. of Units"/>
+  <input id="addConfiguration" type="submit"  value="Add" />
+  {{/with}}
+</template>
+
+<template name="juiceList">
+  <ul>
+    {{#each juiceItem}}
+    <li><span>{{name}}</span> <span>{{units}}</span> <span>units</span></li>
+    {{/each}}
+  </ul> 
+</template>
