@@ -30,7 +30,7 @@ Template.configure.events({
     //Juices.update(this._id,{name: name, units: units})
 
    Juices.insert(
-     { name: name, units: units}
+     { userId: Meteor.userId(), name: name, units: units}
    );
   }
 });

@@ -3,11 +3,14 @@
 </head>
 
 <body>
-  <h1>Configure: myJuice</h1>
-  {{> configure}}
+  {{> loginButtons}}
+  {{#if currentUser}}
+    <h1>Configure: myJuice</h1>
+    {{> configure}}
 
-  <h2>myJuice: List</h2>
-  {{> juiceList}}
+    <h2>myJuice: List</h2>
+    {{> juiceList}}
+  {{/if}}
 </body>
 
 <template name="configure">
