@@ -24,7 +24,7 @@
 <template name="juiceList">
   <ul>
     {{#each juiceItem}}
-    <li><span>{{name}}</span> <span>{{units}}</span> <span>units</span></li>
+    <li><input id="{{_id}}" class="juice" type="submit" value="{{name}} [{{units}}]" /></li>
     {{/each}}
   </ul> 
 </template>
